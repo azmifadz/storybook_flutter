@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
+import 'package:storybook_flutter_example/widget/icon_and_text_row.dart';
 
 void main() => runApp(const MyApp());
 
@@ -100,6 +101,16 @@ class MyApp extends StatelessWidget {
             name: 'Widgets/Text',
             description: 'Simple text widget.',
             builder: (context) => const Center(child: Text('Simple text')),
+          ),
+          Story(
+            name: 'Widgets/Text',
+            description: 'Simple text widget.',
+            builder: (context) => const Center(
+              child: IconAndTextRow(
+                icon: Icons.access_time,
+                text: 'Closing Date: 23/01/2022',
+              ),
+            ),
           ),
         ],
       );
